@@ -24,12 +24,17 @@ app.use(cookieParser());
 //     credentials: true, 
 // };
 
-const corsOptions = {
-    origin: true, // Accept any origin
-    credentials: true // Allow credentials (cookies)
-};
+// const corsOptions = {
+//     origin: true, // Accept any origin
+//     credentials: true // Allow credentials (cookies)
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+app.use(cors({
+    origin: "https://career-builder-frontend.vercel.app", // your frontend
+    credentials: true // allow cookies
+  }));
 
 const PORT = process.env.PORT || 3000;
 app.get('/',(req, res)=>{
