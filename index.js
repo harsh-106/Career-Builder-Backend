@@ -17,11 +17,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
+// const corsOptions = {
+//     origin: (origin, callback) => {
+//         callback(null, true);
+//     },
+//     credentials: true, 
+// };
+
 const corsOptions = {
-    origin: (origin, callback) => {
-        callback(null, true);
-    },
-    credentials: true, 
+    origin: true, // Accept any origin
+    credentials: true // Allow credentials (cookies)
 };
 
 app.use(cors(corsOptions));
