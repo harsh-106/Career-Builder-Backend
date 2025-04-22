@@ -32,7 +32,7 @@ app.use(cookieParser());
 // app.use(cors(corsOptions));
 
 app.use(cors({
-    origin: "https://career-builder-frontend.vercel.app/", // your frontend
+    origin: "https://career-builder-frontend.vercel.app", // your frontend
     credentials: true // allow cookies
   }));
 
